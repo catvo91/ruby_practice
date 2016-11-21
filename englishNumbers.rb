@@ -1,4 +1,5 @@
 #second version after realizing it'd be easier to store a constantly updated answer string
+
 def toEnglish(n)
 	onesString = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 	teensString = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
