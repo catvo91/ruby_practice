@@ -1,5 +1,4 @@
-#second version after realizing it'd be easier to store a constantly updated answer string
-# currently only works for numbers 1-10million kthx
+# it's telling me to use this program to write a lovely song.
 def toEnglish(n)
 	onesString = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 	teensString = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
@@ -9,38 +8,27 @@ def toEnglish(n)
 
 	write = number / 1000000
 	onesMillions = write
-	puts onesMillions.to_s + ' ones million'
 	number = number - write * 1000000
-	puts number.to_s + ' number value after subtraction ones millions'
 
 	write = number / 100000
 	hundredsThousands = write 
-	puts hundredsThousands.to_s + ' hundreds thousands'
 	number = number - write * 100000
-	puts number.to_s + ' number value after subtraction hundreds thousands'
 
 	write = number / 10000
 	tensThousands = write 
-	puts tensThousands.to_s + ' tens thousands'
 	number = number - write * 10000
-	puts number.to_s + ' number value after subtraction tens thousands'
 
 	write = number / 1000
 	thousands =  write 
-	puts thousands.to_s + ' thousands'
 	number = number - write * 1000
 
 	write = number / 100 
-	puts write.to_s + ' write value for hundreds'
 	hundreds = write
 	number = number - write * 100 
 	write = number / 10 
-	puts write.to_s + ' write tens'
 	tens = write
 	number = number - write * 10
-	puts number.to_s + ' number tens'
 	ones = number
-	puts ones.to_s + ' ones!'
 
 	answer = ''
 
@@ -79,20 +67,18 @@ def toEnglish(n)
 	elsif tens == 0 && ones == 0
 		answer = answer + ' zero'
 	end
-	puts answer
+	return answer
+end
+	
+def bottlesOfBeer(n)
+	while n >= 1
+		puts toEnglish(n) + ' bottles of beer on the wall. Blah blah! Passing stuff! '
+		n = n - 1
+		puts toEnglish(n) + ' bottles of beer on the wall! '
+	end
 end
 
-puts 'Please pick a number from 1 - 10 million and type it numerically'
-
-n = gets.chomp.to_i
-	if n <= 0
-		puts 'ONE OR GREATER PLEASE'
-	elsif n > 10000000
-		puts 'LESS THAN TEN MILLION PLEASE'
-	end
-
-toEnglish(n)
-
+bottlesOfBeer(9999)
 
 
 
