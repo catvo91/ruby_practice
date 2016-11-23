@@ -1,3 +1,5 @@
+#make an orange tree with fun stuff
+
 class OrangeTree
 	def initialize(height, age, name)
 		@height = height
